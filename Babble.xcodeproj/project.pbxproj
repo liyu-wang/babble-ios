@@ -14,6 +14,9 @@
 		0111AB581F8704850018FFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111AB561F8704850018FFE1 /* LaunchScreen.storyboard */; };
 		0111AB631F8704850018FFE1 /* BabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB621F8704850018FFE1 /* BabbleTests.swift */; };
 		0111AB6E1F8704850018FFE1 /* BabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */; };
+		04EDC2FE2D55E0D3685EA7AE /* Pods_BabbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */; };
+		754508061D1325D58A2EFE47 /* Pods_Babble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */; };
+		BD1377E75044F84EB717EAC6 /* Pods_BabbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF12B9A631D26B04CD58624B /* Pods_BabbleUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,15 @@
 		0111AB691F8704850018FFE1 /* BabbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbleUITests.swift; sourceTree = "<group>"; };
 		0111AB6F1F8704850018FFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22B1D4EE747878541BE2FDC6 /* Pods-Babble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.release.xcconfig"; sourceTree = "<group>"; };
+		475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Babble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCFCA331ED7186BEF015C84 /* Pods-BabbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabbleTests/Pods-BabbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A72AB035F2B405E76AD5435A /* Pods-BabbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabbleTests/Pods-BabbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF12B9A631D26B04CD58624B /* Pods_BabbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E432D73B6A302AA643133FE1 /* Pods-BabbleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabbleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabbleUITests/Pods-BabbleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E8C17B9FF2641AB9C6B58DE8 /* Pods-Babble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.debug.xcconfig"; sourceTree = "<group>"; };
+		F6CC9250B76F13B3C3662EE8 /* Pods-BabbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabbleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabbleUITests/Pods-BabbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754508061D1325D58A2EFE47 /* Pods_Babble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EDC2FE2D55E0D3685EA7AE /* Pods_BabbleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1377E75044F84EB717EAC6 /* Pods_BabbleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				0111AB611F8704850018FFE1 /* BabbleTests */,
 				0111AB6C1F8704850018FFE1 /* BabbleUITests */,
 				0111AB4B1F8704850018FFE1 /* Products */,
+				3FD574A2901E4389AA12A422 /* Pods */,
+				B88078299A4E7BCCA6F743E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = BabbleUITests;
 			sourceTree = "<group>";
 		};
+		3FD574A2901E4389AA12A422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8C17B9FF2641AB9C6B58DE8 /* Pods-Babble.debug.xcconfig */,
+				22B1D4EE747878541BE2FDC6 /* Pods-Babble.release.xcconfig */,
+				A72AB035F2B405E76AD5435A /* Pods-BabbleTests.debug.xcconfig */,
+				8DCFCA331ED7186BEF015C84 /* Pods-BabbleTests.release.xcconfig */,
+				F6CC9250B76F13B3C3662EE8 /* Pods-BabbleUITests.debug.xcconfig */,
+				E432D73B6A302AA643133FE1 /* Pods-BabbleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B88078299A4E7BCCA6F743E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */,
+				475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */,
+				BF12B9A631D26B04CD58624B /* Pods_BabbleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0111AB721F8704850018FFE1 /* Build configuration list for PBXNativeTarget "Babble" */;
 			buildPhases = (
+				49EB9E39E957D1AF7C344929 /* [CP] Check Pods Manifest.lock */,
 				0111AB461F8704850018FFE1 /* Sources */,
 				0111AB471F8704850018FFE1 /* Frameworks */,
 				0111AB481F8704850018FFE1 /* Resources */,
+				CCEF08E212ABAF1000529F5E /* [CP] Embed Pods Frameworks */,
+				F582998F2AD35A7F374C1379 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0111AB751F8704850018FFE1 /* Build configuration list for PBXNativeTarget "BabbleTests" */;
 			buildPhases = (
+				7CE238487F772F28A1EBFEB9 /* [CP] Check Pods Manifest.lock */,
 				0111AB5A1F8704850018FFE1 /* Sources */,
 				0111AB5B1F8704850018FFE1 /* Frameworks */,
 				0111AB5C1F8704850018FFE1 /* Resources */,
+				0BD71CA718D5D9D959B9101D /* [CP] Embed Pods Frameworks */,
+				2408015E6810E76E8A2E0BA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0111AB781F8704850018FFE1 /* Build configuration list for PBXNativeTarget "BabbleUITests" */;
 			buildPhases = (
+				BC24D3E4925A6122B8701358 /* [CP] Check Pods Manifest.lock */,
 				0111AB651F8704850018FFE1 /* Sources */,
 				0111AB661F8704850018FFE1 /* Frameworks */,
 				0111AB671F8704850018FFE1 /* Resources */,
+				D78787C64445ED2E8041FFA2 /* [CP] Embed Pods Frameworks */,
+				B655684132E834717A8CD66A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BD71CA718D5D9D959B9101D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabbleTests/Pods-BabbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2408015E6810E76E8A2E0BA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabbleTests/Pods-BabbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49EB9E39E957D1AF7C344929 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Babble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CE238487F772F28A1EBFEB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabbleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B655684132E834717A8CD66A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabbleUITests/Pods-BabbleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC24D3E4925A6122B8701358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabbleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCEF08E212ABAF1000529F5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D78787C64445ED2E8041FFA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabbleUITests/Pods-BabbleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F582998F2AD35A7F374C1379 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0111AB461F8704850018FFE1 /* Sources */ = {
@@ -424,6 +620,7 @@
 		};
 		0111AB731F8704850018FFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C17B9FF2641AB9C6B58DE8 /* Pods-Babble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +636,7 @@
 		};
 		0111AB741F8704850018FFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B1D4EE747878541BE2FDC6 /* Pods-Babble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +652,7 @@
 		};
 		0111AB761F8704850018FFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72AB035F2B405E76AD5435A /* Pods-BabbleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +670,7 @@
 		};
 		0111AB771F8704850018FFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DCFCA331ED7186BEF015C84 /* Pods-BabbleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +688,7 @@
 		};
 		0111AB791F8704850018FFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6CC9250B76F13B3C3662EE8 /* Pods-BabbleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +705,7 @@
 		};
 		0111AB7A1F8704850018FFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E432D73B6A302AA643133FE1 /* Pods-BabbleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
