@@ -1,5 +1,9 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - Alamofire (4.5.1)
+  - CocoaLumberjack/Default (3.3.0)
+  - CocoaLumberjack/Swift (3.3.0):
+    - CocoaLumberjack/Default
   - RxAlamofire (4.0.0):
     - RxAlamofire/Core (= 4.0.0)
   - RxAlamofire/Core (4.0.0):
@@ -8,12 +12,16 @@ PODS:
   - RxCocoa (4.0.0-beta.1):
     - RxSwift (~> 4.0.0-beta.1)
   - RxSwift (4.0.0-beta.1)
+  - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.2.0)
   - Alamofire (~> 4.5)
+  - CocoaLumberjack/Swift
   - RxAlamofire (from `https://github.com/RxSwiftCommunity/RxAlamofire.git`)
   - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift4.0-swift4.0`)
   - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift4.0-swift4.0`)
+  - SwiftKeychainWrapper
 
 EXTERNAL SOURCES:
   RxAlamofire:
@@ -37,11 +45,14 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ReactiveX/RxSwift.git
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   RxAlamofire: c50217ed8ebd04888e2ab4b995d0eaeb178895fd
   RxCocoa: 009b86b0b158d4a7e4a5fc29bbdc0688c44fa3bb
   RxSwift: 9488787dfac649ffc1c4fddf3a3b4d6823d0b392
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: ebbfdc2d5eab73f16c1047f97ff0a15a9834c53d
+PODFILE CHECKSUM: dd4d5dd4cdd9c054d6d415e9b664af60eea398a9
 
 COCOAPODS: 1.3.1

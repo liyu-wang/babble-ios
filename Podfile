@@ -6,10 +6,13 @@ target 'Babble' do
   use_frameworks!
 
   # Pods for Babble
+  pod 'ActionSheetPicker-3.0', '~> 2.2.0'
   pod 'Alamofire',  '~> 4.5'
+  pod 'CocoaLumberjack/Swift'
   pod 'RxSwift',    :git => "https://github.com/ReactiveX/RxSwift.git", :branch => 'rxswift4.0-swift4.0'
   pod 'RxCocoa',    :git => "https://github.com/ReactiveX/RxSwift.git", :branch => 'rxswift4.0-swift4.0'
   pod 'RxAlamofire',    :git => "https://github.com/RxSwiftCommunity/RxAlamofire.git"
+  pod 'SwiftKeychainWrapper'
 
   target 'BabbleTests' do
     inherit! :search_paths

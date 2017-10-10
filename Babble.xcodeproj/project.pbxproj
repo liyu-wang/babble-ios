@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0111AB4E1F8704850018FFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB4D1F8704850018FFE1 /* AppDelegate.swift */; };
-		0111AB501F8704850018FFE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB4F1F8704850018FFE1 /* ViewController.swift */; };
+		0111AB501F8704850018FFE1 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB4F1F8704850018FFE1 /* JoinViewController.swift */; };
 		0111AB531F8704850018FFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111AB511F8704850018FFE1 /* Main.storyboard */; };
 		0111AB551F8704850018FFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0111AB541F8704850018FFE1 /* Assets.xcassets */; };
 		0111AB581F8704850018FFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0111AB561F8704850018FFE1 /* LaunchScreen.storyboard */; };
 		0111AB631F8704850018FFE1 /* BabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB621F8704850018FFE1 /* BabbleTests.swift */; };
 		0111AB6E1F8704850018FFE1 /* BabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */; };
+		0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB841F8B05DB0018FFE1 /* BAViewController.swift */; };
+		01FBCAB91F8B1C51007C00F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBCAB81F8B1C51007C00F9 /* HomeViewController.swift */; };
 		04EDC2FE2D55E0D3685EA7AE /* Pods_BabbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */; };
 		754508061D1325D58A2EFE47 /* Pods_Babble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */; };
 		BD1377E75044F84EB717EAC6 /* Pods_BabbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF12B9A631D26B04CD58624B /* Pods_BabbleUITests.framework */; };
@@ -39,7 +41,7 @@
 /* Begin PBXFileReference section */
 		0111AB4A1F8704850018FFE1 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0111AB4D1F8704850018FFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0111AB4F1F8704850018FFE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0111AB4F1F8704850018FFE1 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		0111AB521F8704850018FFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0111AB541F8704850018FFE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0111AB571F8704850018FFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		0111AB691F8704850018FFE1 /* BabbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbleUITests.swift; sourceTree = "<group>"; };
 		0111AB6F1F8704850018FFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0111AB841F8B05DB0018FFE1 /* BAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAViewController.swift; sourceTree = "<group>"; };
+		01FBCAB81F8B1C51007C00F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22B1D4EE747878541BE2FDC6 /* Pods-Babble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.release.xcconfig"; sourceTree = "<group>"; };
 		475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Babble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +118,12 @@
 		0111AB4C1F8704850018FFE1 /* Babble */ = {
 			isa = PBXGroup;
 			children = (
+				0111AB7D1F8B049C0018FFE1 /* Base */,
+				0111AB831F8B05830018FFE1 /* Managers */,
+				0111AB811F8B051A0018FFE1 /* Models */,
+				0111AB821F8B053C0018FFE1 /* ViewModels */,
+				0111AB801F8B04F70018FFE1 /* Controllers */,
 				0111AB4D1F8704850018FFE1 /* AppDelegate.swift */,
-				0111AB4F1F8704850018FFE1 /* ViewController.swift */,
 				0111AB511F8704850018FFE1 /* Main.storyboard */,
 				0111AB541F8704850018FFE1 /* Assets.xcassets */,
 				0111AB561F8704850018FFE1 /* LaunchScreen.storyboard */,
@@ -140,6 +148,60 @@
 				0111AB6F1F8704850018FFE1 /* Info.plist */,
 			);
 			path = BabbleUITests;
+			sourceTree = "<group>";
+		};
+		0111AB7B1F8B04230018FFE1 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				0111AB4F1F8704850018FFE1 /* JoinViewController.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		0111AB7C1F8B043F0018FFE1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				01FBCAB81F8B1C51007C00F9 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0111AB7D1F8B049C0018FFE1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0111AB841F8B05DB0018FFE1 /* BAViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0111AB801F8B04F70018FFE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0111AB7B1F8B04230018FFE1 /* Join */,
+				0111AB7C1F8B043F0018FFE1 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0111AB811F8B051A0018FFE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0111AB821F8B053C0018FFE1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0111AB831F8B05830018FFE1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		3FD574A2901E4389AA12A422 /* Pods */ = {
@@ -410,17 +472,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,8 +532,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0111AB501F8704850018FFE1 /* ViewController.swift in Sources */,
+				0111AB501F8704850018FFE1 /* JoinViewController.swift in Sources */,
 				0111AB4E1F8704850018FFE1 /* AppDelegate.swift in Sources */,
+				0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */,
+				01FBCAB91F8B1C51007C00F9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
