@@ -15,6 +15,12 @@
 		0111AB631F8704850018FFE1 /* BabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB621F8704850018FFE1 /* BabbleTests.swift */; };
 		0111AB6E1F8704850018FFE1 /* BabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */; };
 		0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB841F8B05DB0018FFE1 /* BAViewController.swift */; };
+		012A46C11F90858F00F3CD13 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A46C01F90858F00F3CD13 /* UserWebService.swift */; };
+		014193B01F8C786000BFBB23 /* LWSlideUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */; };
+		014193B41F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */; };
+		014193B61F8DC17700BFBB23 /* LWSlideUpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */; };
+		01A1CB421F942FB70010E393 /* BAWebServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1CB411F942FB70010E393 /* BAWebServiceHelper.swift */; };
+		01CE5DCA1F958A6500F7756E /* BAEnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE5DC91F958A6500F7756E /* BAEnvironmentManager.swift */; };
 		01FBCAB91F8B1C51007C00F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBCAB81F8B1C51007C00F9 /* HomeViewController.swift */; };
 		04EDC2FE2D55E0D3685EA7AE /* Pods_BabbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */; };
 		754508061D1325D58A2EFE47 /* Pods_Babble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9B28424E5BFA78FB83A16B /* Pods_Babble.framework */; };
@@ -53,6 +59,12 @@
 		0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbleUITests.swift; sourceTree = "<group>"; };
 		0111AB6F1F8704850018FFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0111AB841F8B05DB0018FFE1 /* BAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAViewController.swift; sourceTree = "<group>"; };
+		012A46C01F90858F00F3CD13 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
+		014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWSlideUpPresentationController.swift; sourceTree = "<group>"; };
+		014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWMultiSelectionTableViewController.swift; sourceTree = "<group>"; };
+		014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWSlideUpNavigationController.swift; sourceTree = "<group>"; };
+		01A1CB411F942FB70010E393 /* BAWebServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAWebServiceHelper.swift; sourceTree = "<group>"; };
+		01CE5DC91F958A6500F7756E /* BAEnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAEnvironmentManager.swift; sourceTree = "<group>"; };
 		01FBCAB81F8B1C51007C00F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22B1D4EE747878541BE2FDC6 /* Pods-Babble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.release.xcconfig"; sourceTree = "<group>"; };
 		475C833D864856E6FFE62E47 /* Pods_BabbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				0111AB7D1F8B049C0018FFE1 /* Base */,
+				012A46BF1F90856E00F3CD13 /* WebServices */,
 				0111AB831F8B05830018FFE1 /* Managers */,
 				0111AB811F8B051A0018FFE1 /* Models */,
 				0111AB821F8B053C0018FFE1 /* ViewModels */,
@@ -170,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				0111AB841F8B05DB0018FFE1 /* BAViewController.swift */,
+				014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */,
+				014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */,
+				014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -200,8 +216,18 @@
 		0111AB831F8B05830018FFE1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				01CE5DC91F958A6500F7756E /* BAEnvironmentManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		012A46BF1F90856E00F3CD13 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				01A1CB411F942FB70010E393 /* BAWebServiceHelper.swift */,
+				012A46C01F90858F00F3CD13 /* UserWebService.swift */,
+			);
+			path = WebServices;
 			sourceTree = "<group>";
 		};
 		3FD574A2901E4389AA12A422 /* Pods */ = {
@@ -532,10 +558,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CE5DCA1F958A6500F7756E /* BAEnvironmentManager.swift in Sources */,
+				014193B61F8DC17700BFBB23 /* LWSlideUpNavigationController.swift in Sources */,
+				014193B01F8C786000BFBB23 /* LWSlideUpPresentationController.swift in Sources */,
 				0111AB501F8704850018FFE1 /* JoinViewController.swift in Sources */,
 				0111AB4E1F8704850018FFE1 /* AppDelegate.swift in Sources */,
 				0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */,
+				012A46C11F90858F00F3CD13 /* UserWebService.swift in Sources */,
 				01FBCAB91F8B1C51007C00F9 /* HomeViewController.swift in Sources */,
+				014193B41F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift in Sources */,
+				01A1CB421F942FB70010E393 /* BAWebServiceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

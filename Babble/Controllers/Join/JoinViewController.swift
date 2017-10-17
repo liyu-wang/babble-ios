@@ -8,18 +8,19 @@
 
 import UIKit
 import ActionSheetPicker_3_0
-import Alamofire
-import RxSwift
 import RxCocoa
-import RxAlamofire
+import RxSwift
 import SwiftKeychainWrapper
 
 class JoinViewController: BAViewController {
 
-    let sourceStringURL = "http://localhost:8088/users"
     let disposeBag = DisposeBag()
     
     var argsDict: Variable<[String: Any]> = Variable([:])
+    
+    var ageSeletedIndex = 0
+    var genderSelectedIndex = 0
+    var seekingSelectedIndices = [0]
     
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
@@ -44,6 +45,25 @@ class JoinViewController: BAViewController {
 
 extension JoinViewController {
     
+    private func createUser() {
+        UserWebService.shared.createUser(
+            age: argsDict.value["age"] as! Int,
+            gender: argsDict.value["gender"] as! String,
+            seeking: argsDict.value["seeking"] as! String,
+            language: BAEnvironmentManager.shared.getSystemLanguage(),
+            disposeBag: disposeBag) { [weak self] (token, error) in
+                if let token = token {
+                    KeychainWrapper.standard.set(token, forKey: "token")
+                } else {
+                    self?.displayError(error! as NSError)
+                }
+        }
+        
+    }
+}
+
+extension JoinViewController {
+    
     private func setupReactive() {
         ageButton.rx.tap
             .bind{ [weak self] in
@@ -57,12 +77,13 @@ extension JoinViewController {
         
         seekingButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.argsDict.value["seaking"] = "0, 1"
+                self?.showSeekingSelectionSheet()
             }).disposed(by: disposeBag)
         
         startButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.createUser()
+                
             }).disposed(by: disposeBag)
         
         argsDict.asObservable()
@@ -79,10 +100,11 @@ extension JoinViewController {
     private func showAgeActionSheetPicker() {
         let picker = ActionSheetStringPicker(title: "Age",
                                              rows: [Int](18...100),
-                                             initialSelection: 0,
+                                             initialSelection: self.ageSeletedIndex,
                                              doneBlock: { (pick, index, value) in
                                                 self.argsDict.value["age"] = value!
                                                 self.ageButton.setTitle("\(value!)", for: .normal)
+                                                self.ageSeletedIndex = index
                                              },
                                              cancel: { (picker) in
                                                 
@@ -93,12 +115,15 @@ extension JoinViewController {
     }
     
     private func showGenderActionSheetPicker() {
+        
+        let genderValues = ["m", "f"]
         let picker = ActionSheetStringPicker(title: "Gender",
                                              rows: ["Male", "Female"],
-                                             initialSelection: 0,
+                                             initialSelection: self.genderSelectedIndex,
                                              doneBlock: { (picker, index, value) in
-                                                self.argsDict.value["gender"] = value!
                                                 self.genderButton.setTitle("\(value!)", for: .normal)
+                                                self.argsDict.value["gender"] = genderValues[index]
+                                                self.genderSelectedIndex = index
                                              },
                                              cancel: { (picker) in
                                                 
@@ -110,26 +135,35 @@ extension JoinViewController {
     
     private func showSeekingSelectionSheet() {
         
+        let seekingValues = ["m", "f", "tm", "tf", "ot"]
+        
+        let multiSelectionViewController = LWMultiSelectionTableViewController(
+            title: "Seeking",
+            strs: ["Men", "Women", "Transmen", "Transwomen", "Pangender/Other"],
+            selected: self.seekingSelectedIndices,
+            completion: { (multiSelectionController, selectedItems, selectedIndices) in
+                let str = selectedItems.joined(separator: ",")
+                self.seekingButton.setTitle(str, for: .normal)
+                
+                var selectedValues: [String] = []
+                for i in selectedIndices {
+                    selectedValues.append(seekingValues[i])
+                }
+                self.argsDict.value["seeking"] = selectedValues.joined(separator: ",")
+                
+                self.seekingSelectedIndices = selectedIndices
+        })
+        multiSelectionViewController.zeroSelectionAllowed = false
+        multiSelectionViewController.cancelButtonHidden = true
+        
+        let navController = LWSlideUpNavigationController(rootViewController: multiSelectionViewController)
+        let slideUpPresentationController = LWSlideUpPresentationController(presentedViewController: navController, presenting: self)
+        navController.transitioningDelegate = slideUpPresentationController
+        
+        self.present(navController, animated: true, completion: nil)
     }
     
     private func showTermsOfService() {
         
-    }
-}
-
-extension JoinViewController {
-    
-    private func createUser() {
-        
-        RxAlamofire.requestJSON(.post, sourceStringURL)
-            .debug()
-            .subscribe(onNext: { [weak self] (r, json) in
-                if let dict = json as? [String: AnyObject] {
-                    KeychainWrapper.standard.set(dict["token"] as! String, forKey: "token")
-                }
-                }, onError: { [weak self] (error) in
-                    self?.displayError(error as NSError)
-            })
-            .disposed(by: disposeBag)
     }
 }
