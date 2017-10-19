@@ -10,17 +10,10 @@ import UIKit
 import ActionSheetPicker_3_0
 import RxCocoa
 import RxSwift
-import SwiftKeychainWrapper
 
 class JoinViewController: BAViewController {
 
-    let disposeBag = DisposeBag()
-    
-    var argsDict: Variable<[String: Any]> = Variable([:])
-    
-    var ageSeletedIndex = 0
-    var genderSelectedIndex = 0
-    var seekingSelectedIndices = [0]
+    var joinViewModel = JoinViewModel()
     
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var genderButton: UIButton!
@@ -28,43 +21,30 @@ class JoinViewController: BAViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsButton: UIButton!
     
+    var ageSelectedIndex = 0
+    var genderSelectedIndex = 0
+    var seekingSelectedIndices: [Int] = [0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        startButton.isEnabled = false
         
-        setupReactive()
+        self.setupReactive()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }    
-    
-}
-
-extension JoinViewController {
-    
-    private func createUser() {
-        UserWebService.shared.createUser(
-            age: argsDict.value["age"] as! Int,
-            gender: argsDict.value["gender"] as! String,
-            seeking: argsDict.value["seeking"] as! String,
-            language: BAEnvironmentManager.shared.getSystemLanguage(),
-            disposeBag: disposeBag) { [weak self] (token, error) in
-                if let token = token {
-                    KeychainWrapper.standard.set(token, forKey: "token")
-                } else {
-                    self?.displayError(error! as NSError)
-                }
-        }
-        
     }
 }
 
 extension JoinViewController {
     
-    private func setupReactive() {
+    func setupReactive() {
+        observeDisplayErrorEvent(from: self.joinViewModel)
+        
+        self.joinViewModel.isCreateUserEnabled.bind(to: startButton.rx.isEnabled).disposed(by: disposeBag)
+        
         ageButton.rx.tap
             .bind{ [weak self] in
                 self?.showAgeActionSheetPicker()
@@ -82,13 +62,7 @@ extension JoinViewController {
         
         startButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.createUser()
-                
-            }).disposed(by: disposeBag)
-        
-        argsDict.asObservable()
-            .subscribe(onNext: { [weak self] args in
-                self?.startButton.isEnabled = (args.count == 3)
+                self?.joinViewModel.createUser()
             }).disposed(by: disposeBag)
         
         termsButton.rx.tap
@@ -100,11 +74,12 @@ extension JoinViewController {
     private func showAgeActionSheetPicker() {
         let picker = ActionSheetStringPicker(title: "Age",
                                              rows: [Int](18...100),
-                                             initialSelection: self.ageSeletedIndex,
+                                             initialSelection: self.ageSelectedIndex,
                                              doneBlock: { (pick, index, value) in
-                                                self.argsDict.value["age"] = value!
                                                 self.ageButton.setTitle("\(value!)", for: .normal)
-                                                self.ageSeletedIndex = index
+                                                self.ageSelectedIndex = index
+                                                
+                                                self.joinViewModel.age.value = value as! Int
                                              },
                                              cancel: { (picker) in
                                                 
@@ -117,13 +92,15 @@ extension JoinViewController {
     private func showGenderActionSheetPicker() {
         
         let genderValues = ["m", "f"]
+        
         let picker = ActionSheetStringPicker(title: "Gender",
                                              rows: ["Male", "Female"],
                                              initialSelection: self.genderSelectedIndex,
                                              doneBlock: { (picker, index, value) in
                                                 self.genderButton.setTitle("\(value!)", for: .normal)
-                                                self.argsDict.value["gender"] = genderValues[index]
                                                 self.genderSelectedIndex = index
+                                                
+                                                self.joinViewModel.gender.value = genderValues[index]
                                              },
                                              cancel: { (picker) in
                                                 
@@ -145,13 +122,13 @@ extension JoinViewController {
                 let str = selectedItems.joined(separator: ",")
                 self.seekingButton.setTitle(str, for: .normal)
                 
+                self.seekingSelectedIndices = selectedIndices
+                
                 var selectedValues: [String] = []
                 for i in selectedIndices {
                     selectedValues.append(seekingValues[i])
                 }
-                self.argsDict.value["seeking"] = selectedValues.joined(separator: ",")
-                
-                self.seekingSelectedIndices = selectedIndices
+                self.joinViewModel.seeking.value = selectedValues.joined(separator: ",")
         })
         multiSelectionViewController.zeroSelectionAllowed = false
         multiSelectionViewController.cancelButtonHidden = true

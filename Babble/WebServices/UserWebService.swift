@@ -30,25 +30,26 @@ enum UserRouter: URLRequestConvertible {
 }
 
 struct UserWebService {
-    static let shared = UserWebService()
-    
+    var disposeBag: DisposeBag = DisposeBag()
+
     func createUser(
         age: Int,
         gender: String,
         seeking: String,
         language: String,
-        disposeBag: DisposeBag? = nil,
-        completion: @escaping ((_ token: String?, _ error: Error?) -> Void))
+        completion: @escaping ((_ model: JoinModel?, _ error: Error?) -> Void))
     {   
         RxAlamofire.requestJSON(UserRouter.create(age: age, gender: gender, seeking: seeking, language: language))
             .debug()
             .subscribe(onNext: { (r, json) in
                 if let dict = json as? [String: AnyObject] {
-                    completion((dict["token"] as! String), nil)
+                    let model = JoinModel(userID: dict["userId"] as! String,
+                                          token: dict["token"] as! String)
+                    completion(model, nil)
                 }
             }, onError: { (error) in
                 completion(nil, error)
             })
-            .disposed(by: disposeBag!)
+            .disposed(by: disposeBag)
     }
 }

@@ -16,6 +16,9 @@
 		0111AB6E1F8704850018FFE1 /* BabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB6D1F8704850018FFE1 /* BabbleUITests.swift */; };
 		0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111AB841F8B05DB0018FFE1 /* BAViewController.swift */; };
 		012A46C11F90858F00F3CD13 /* UserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A46C01F90858F00F3CD13 /* UserWebService.swift */; };
+		01386E251F95CDAD00B64726 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01386E241F95CDAD00B64726 /* JoinViewModel.swift */; };
+		01386E281F96F95E00B64726 /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01386E271F96F95E00B64726 /* JoinModel.swift */; };
+		01386E2A1F970DFB00B64726 /* BAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01386E291F970DFB00B64726 /* BAViewModel.swift */; };
 		014193B01F8C786000BFBB23 /* LWSlideUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */; };
 		014193B41F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */; };
 		014193B61F8DC17700BFBB23 /* LWSlideUpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */; };
@@ -60,6 +63,9 @@
 		0111AB6F1F8704850018FFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0111AB841F8B05DB0018FFE1 /* BAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAViewController.swift; sourceTree = "<group>"; };
 		012A46C01F90858F00F3CD13 /* UserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebService.swift; sourceTree = "<group>"; };
+		01386E241F95CDAD00B64726 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		01386E271F96F95E00B64726 /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
+		01386E291F970DFB00B64726 /* BAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAViewModel.swift; sourceTree = "<group>"; };
 		014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWSlideUpPresentationController.swift; sourceTree = "<group>"; };
 		014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWMultiSelectionTableViewController.swift; sourceTree = "<group>"; };
 		014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWSlideUpNavigationController.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 		0111AB4C1F8704850018FFE1 /* Babble */ = {
 			isa = PBXGroup;
 			children = (
+				01386E261F95CE1500B64726 /* Extensions */,
 				0111AB7D1F8B049C0018FFE1 /* Base */,
 				012A46BF1F90856E00F3CD13 /* WebServices */,
 				0111AB831F8B05830018FFE1 /* Managers */,
@@ -182,10 +189,7 @@
 		0111AB7D1F8B049C0018FFE1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0111AB841F8B05DB0018FFE1 /* BAViewController.swift */,
-				014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */,
-				014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */,
-				014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */,
+				01386E2B1F97167900B64726 /* LWMultiSelectionViewController */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -193,6 +197,7 @@
 		0111AB801F8B04F70018FFE1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0111AB841F8B05DB0018FFE1 /* BAViewController.swift */,
 				0111AB7B1F8B04230018FFE1 /* Join */,
 				0111AB7C1F8B043F0018FFE1 /* Home */,
 			);
@@ -202,6 +207,7 @@
 		0111AB811F8B051A0018FFE1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01386E271F96F95E00B64726 /* JoinModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 		0111AB821F8B053C0018FFE1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				01386E291F970DFB00B64726 /* BAViewModel.swift */,
+				01386E231F95CD9D00B64726 /* Join */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +236,31 @@
 				012A46C01F90858F00F3CD13 /* UserWebService.swift */,
 			);
 			path = WebServices;
+			sourceTree = "<group>";
+		};
+		01386E231F95CD9D00B64726 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				01386E241F95CDAD00B64726 /* JoinViewModel.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		01386E261F95CE1500B64726 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01386E2B1F97167900B64726 /* LWMultiSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				014193B31F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift */,
+				014193AF1F8C786000BFBB23 /* LWSlideUpPresentationController.swift */,
+				014193B51F8DC17700BFBB23 /* LWSlideUpNavigationController.swift */,
+			);
+			path = LWMultiSelectionViewController;
 			sourceTree = "<group>";
 		};
 		3FD574A2901E4389AA12A422 /* Pods */ = {
@@ -559,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CE5DCA1F958A6500F7756E /* BAEnvironmentManager.swift in Sources */,
+				01386E2A1F970DFB00B64726 /* BAViewModel.swift in Sources */,
 				014193B61F8DC17700BFBB23 /* LWSlideUpNavigationController.swift in Sources */,
 				014193B01F8C786000BFBB23 /* LWSlideUpPresentationController.swift in Sources */,
 				0111AB501F8704850018FFE1 /* JoinViewController.swift in Sources */,
@@ -566,8 +600,10 @@
 				0111AB851F8B05DB0018FFE1 /* BAViewController.swift in Sources */,
 				012A46C11F90858F00F3CD13 /* UserWebService.swift in Sources */,
 				01FBCAB91F8B1C51007C00F9 /* HomeViewController.swift in Sources */,
+				01386E251F95CDAD00B64726 /* JoinViewModel.swift in Sources */,
 				014193B41F8C7BE700BFBB23 /* LWMultiSelectionTableViewController.swift in Sources */,
 				01A1CB421F942FB70010E393 /* BAWebServiceHelper.swift in Sources */,
+				01386E281F96F95E00B64726 /* JoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
